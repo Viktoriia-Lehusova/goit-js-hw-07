@@ -40,26 +40,20 @@ function onOpenModal(source, alt) {
         src = '${source}';
         alt='${alt}';
       />
-  `,
-    {
-      onShowModal: () => document.addEventListener('keydown', onClose),
-    },
-    {
-      onCloseModal: () => document.removeEventListener('keydown', onClose),
-    }
+  `
+    // {
+    //   onShowModal: () => document.addEventListener('keydown', onCloseImg),
+    // },
+    // {
+    //   onCloseModal: () => document.removeEventListener('keydown', onCloseImg),
+    // }
   );
   instance.show();
 }
 
-//  const imgSrc = evt.target.dataset.source;
-//  console.log(imgSrc);
-
-//  const imgAlt = evt.target.alt;
-//  console.log(imgAlt);
-
-//  const instance = basicLightbox.create(` <img
-//         src = ${imgSrc};
-//         alt=${imgAlt};
-//       />
-//   `);
-//  instance.show();
+// function onCloseImg(evt) {
+//   if (evt.code !== 'Escape') {
+//     return;
+//   }
+//   instance.close();
+// }
